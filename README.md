@@ -1,11 +1,11 @@
-Overview
+Overview- 
 This repository contains the results of a vulnerability assessment I conducted on the PayMeFinTech website as part of a task for an internship application.
 
-About Me
+About Me- 
 I am a student with a keen interest in cybersecurity. While I lack professional experience and access to advanced tools, I used freely available resources and techniques to perform this assessment. My knowledge is self-taught, and I attempted to apply what I learned to the best of my ability.
 
 
-Tools Used
+Tools Used- 
 To identify vulnerabilities in the website, the following tools were employed:
 Nikto: A web server scanner to detect outdated software, misconfigurations, and common vulnerabilities.
 Wapiti: For identifying web application vulnerabilities like XSS, SQL injection, and file disclosure.
@@ -14,7 +14,7 @@ Nslookup & Traceroute: To analyze DNS configurations and network paths.
 Whois Lookup: To extract domain registration and hosting information.
 
 
-Methodology
+Methodology- 
 The assessment was conducted in the following steps:
 
 1. Domain Information Gathering:
@@ -28,7 +28,7 @@ The assessment was conducted in the following steps:
    - Nikto, Wapiti, and Skipfish scans were conducted without authentication to discover potential vulnerabilities in the public-facing web application.
 
 
-Findings
+Findings- 
 Below are the potential vulnerabilities identified during the assessment:
 
 1. Outdated Software:
@@ -46,7 +46,7 @@ Below are the potential vulnerabilities identified during the assessment:
      - Potential SQL Injection Points: Certain endpoints appear vulnerable due to improper input validation.
 
 
-Recommendations
+Recommendations- 
 1. Update Software:
    - Ensure the web server and associated software are updated to their latest versions.
 
@@ -62,6 +62,6 @@ Recommendations
 
 
 
-Conclusion
+Conclusion- 
 This project was a learning experience for me, the detailed findings and recommended mitigations should serve as a roadmap to strengthen the security posture of the PayMeFinTech website as per my understanding.
 

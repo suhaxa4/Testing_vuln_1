@@ -1,0 +1,183 @@
+                                                                          ┌──(root㉿kali)-[~]
+└─# nslookup paymefin.tech  
+Server:         192.168.29.1
+Address:        192.168.29.1#53
+
+Non-authoritative answer:
+Name:   paymefin.tech
+Address: 76.76.21.21
+
+                                                                             
+┌──(root㉿kali)-[~]
+└─# traceroute paymefin.tech
+traceroute to paymefin.tech (76.76.21.21), 30 hops max, 60 byte packets
+ 1  reliance.reliance (192.168.29.1)  2.495 ms  3.935 ms  5.758 ms
+ 2  10.12.112.1 (10.12.112.1)  12.086 ms  11.971 ms  11.832 ms
+ 3  172.16.18.5 (172.16.18.5)  14.369 ms  14.230 ms 172.16.18.29 (172.16.18.29)  11.752 ms
+ 4  192.168.96.238 (192.168.96.238)  10.942 ms 192.168.96.234 (192.168.96.234)  13.416 ms 192.168.96.240 (192.168.96.240)  12.856 ms
+ 5  172.26.111.117 (172.26.111.117)  12.164 ms  11.696 ms  11.583 ms
+ 6  172.26.111.131 (172.26.111.131)  11.435 ms  5.875 ms  7.006 ms
+ 7  192.168.44.46 (192.168.44.46)  6.882 ms 192.168.44.42 (192.168.44.42)  6.713 ms 192.168.44.48 (192.168.44.48)  6.610 ms
+ 8  * * *
+ 9  * * *
+10  * * *
+11  49.44.18.38 (49.44.18.38)  42.270 ms * *
+12  * * *
+13  49.44.18.38 (49.44.18.38)  398.297 ms 99.83.67.32 (99.83.67.32)  394.217 ms 49.44.18.38 (49.44.18.38)  147.438 ms
+14  * * *
+15  99.83.67.32 (99.83.67.32)  29.038 ms * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+                                                                             
+                                                                                                                                                                                                          
+┌──(root㉿kali)-[~]
+└─# nikto -host paymefin.tech
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          76.76.21.21
++ Target Hostname:    paymefin.tech
++ Target Port:        80
++ Start Time:         2024-11-16 09:30:05 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Vercel
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: Uncommon header 'refresh' found, with contents: 0;url=https://paymefin.tech/.
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ Root page / redirects to: https://paymefin.tech/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /database.cer: Uncommon header 'x-vercel-id' found, with contents: bom1::m65hj-1731767488284-82f62f746573.
++ /file/../../../../../../../../etc/: Uncommon header 'x-vercel-mitigated' found, with contents: challenge.
++ /file/../../../../../../../../etc/: Uncommon header 'x-vercel-challenge-token' found, with contents: 2.1731767732.60.NzBjNDU0MTRkMDg3YWY0ZTcwZWIwNzg1NTQzN2FmMGY7M2ZhMGM4OWE7MjViYzlhNjQ4OTQ1YjdkZWQzNjA5MTYxMjhiOWY3MjA2ODc5ZWUxNjs0O1w5+aTcjLHuoYRbWW81aeJRYrlG4/LOvttHJrYDACUeX/zh1b+Rpr40fx7o/qcL7mA2WwYd/Y173XQ/eE77ATpHy6TPBHqumQc=.dcbb205a3081bbff1e6a9f01da6ba291.
++ ERROR: Error limit (20) reached for host, giving up. Last error: 
++ Scan terminated: 6 error(s) and 6 item(s) reported on remote host
++ End Time:           2024-11-16 09:52:42 (GMT-5) (1357 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+skipfish version 2.10b by lcamtuf@google.com                                                                                                                                                                                               
+                                                                                                                                                                                                                                           
+  - paymefin.tech -                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+Scan statistics:                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+      Scan time : 0:01:11.064                                                                                                                                                                                                              
+  HTTP requests : 1096 (15.4/s), 33635 kB in, 200 kB out (476.1 kB/s)                                                                                                                                                                      
+    Compression : 0 kB in, 0 kB out (0.0% gain)                                                                                                                                                                                            
+    HTTP faults : 0 net errors, 0 proto errors, 0 retried, 0 drops                                                                                                                                                                         
+ TCP handshakes : 14 total (78.4 req/conn)                                                                                                                                                                                                 
+     TCP faults : 0 failures, 0 timeouts, 4 purged                                                                                                                                                                                         
+ External links : 0 skipped                                                                                                                                                                                                                
+   Reqs pending : 1                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+Database statistics:                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                           
+         Pivots : 2 total, 2 done (100.00%)                                                                                                                                                                                                
+    In progress : 0 pending, 0 init, 0 attacks, 0 dict                                                                                                                                                                                     
+  Missing nodes : 0 spotted                                                                                                                                                                                                                
+     Node types : 1 serv, 1 dir, 0 file, 0 pinfo, 0 unkn, 0 par, 0 val                                                                                                                                                                     
+   Issues found : 6 info, 0 warn, 1 low, 0 medium, 0 high impact                                                                                                                                                                           
+      Dict size : 2 words (2 new), 1 extensions, 256 candidates                                                                                                                                                                            
+     Signatures : 77 total                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                           
+[+] Copying static resources...                                                                                                                                                                                                            
+[+] Sorting and annotating crawl nodes: 2                                                                                                                                                                                                  
+[+] Looking for duplicate entries: 2                                                                                                                                                                                                       
+[+] Counting unique nodes: 2                                                                                                                                                                                                               
+[+] Saving pivot data for third-party tools...                                                                                                                                                                                             
+[+] Writing scan description...                                                                                                                                                                                                            
+[+] Writing crawl tree: 2                                                                                                                                                                                                                  
+[+] Generating summary views...                                                                                                                                                                                                            
+[+] Report saved to 'skip/index.html' [0xadaa76d4].                                                                                                                                                                                        
+[+] This was a great day for science!                                                                                                                                                                                                      
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ wapiti
+
+ ██╗    ██╗ █████╗ ██████╗ ██╗████████╗██╗██████╗
+ ██║    ██║██╔══██╗██╔══██╗██║╚══██╔══╝██║╚════██╗
+ ██║ █╗ ██║███████║██████╔╝██║   ██║   ██║ █████╔╝
+ ██║███╗██║██╔══██║██╔═══╝ ██║   ██║   ██║ ╚═══██╗
+ ╚███╔███╔╝██║  ██║██║     ██║   ██║   ██║██████╔╝
+  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝   ╚═╝╚═════╝  
+Wapiti-3.0.4 (wapiti.sourceforge.io)
+[*] You are lucky! Full moon tonight.
+usage: wapiti [-h] [-u URL] [--scope {page,folder,domain,url,punk}] [-m MODULES_LIST] [--list-modules] [--update] [-l LEVEL] [-p PROXY_URL] [--tor] [-a CREDENTIALS] [--auth-type {basic,digest,kerberos,ntlm,post}] [-c COOKIE_FILE]
+              [--skip-crawl] [--resume-crawl] [--flush-attacks] [--flush-session] [--store-session PATH] [--store-config PATH] [-s URL] [-x URL] [-r PARAMETER] [--skip PARAMETER] [-d DEPTH] [--max-links-per-page MAX]
+              [--max-files-per-dir MAX] [--max-scan-time SECONDS] [--max-attack-time SECONDS] [--max-parameters MAX] [-S FORCE] [-t SECONDS] [-H HEADER] [-A AGENT] [--verify-ssl {0,1}] [--color] [-v LEVEL] [-f FORMAT] [-o OUPUT_PATH]
+              [--external-endpoint EXTERNAL_ENDPOINT_URL] [--internal-endpoint INTERNAL_ENDPOINT_URL] [--endpoint ENDPOINT_URL] [--no-bugreport] [--version]
+wapiti: error: one of the arguments -u/--url --list-modules --update is required
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ wapiti -u  https://paymefin.tech
+
+ ██╗    ██╗ █████╗ ██████╗ ██╗████████╗██╗██████╗
+ ██║    ██║██╔══██╗██╔══██╗██║╚══██╔══╝██║╚════██╗
+ ██║ █╗ ██║███████║██████╔╝██║   ██║   ██║ █████╔╝
+ ██║███╗██║██╔══██║██╔═══╝ ██║   ██║   ██║ ╚═══██╗
+ ╚███╔███╔╝██║  ██║██║     ██║   ██║   ██║██████╔╝
+  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝   ╚═╝╚═════╝  
+Wapiti-3.0.4 (wapiti.sourceforge.io)
+[*] You are lucky! Full moon tonight.
+[*] Saving scan state, please wait...
+
+ Note
+========
+This scan has been saved in the file /home/kali/.wapiti/scans/paymefin.tech_folder_b7f56278.db
+[*] Wapiti found 2 URLs and forms during the scan
+[*] Loading modules:
+         backup, blindsql, brute_login_form, buster, cookieflags, crlf, csp, csrf, exec, file, htaccess, http_headers, methods, nikto, permanentxss, redirect, shellshock, sql, ssrf, wapp, xss, xxe
+Problem with local wapp database.
+Downloading from the web...
+
+[*] Launching module csp
+CSP is not set
+
+[*] Launching module http_headers
+Checking X-Frame-Options :
+X-Frame-Options is not set
+Checking X-XSS-Protection :
+X-XSS-Protection is not set
+Checking X-Content-Type-Options :
+X-Content-Type-Options is not set
+Checking Strict-Transport-Security :
+OK
+
+[*] Launching module cookieflags
+
+[*] Launching module exec
+
+[*] Launching module file
+
+[*] Launching module sql
+
+[*] Launching module xss
+
+[*] Launching module ssrf
+[*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?id=a80ujb for results, please wait...
+
+[*] Launching module redirect
+
+[*] Launching module blindsql
+
+[*] Launching module permanentxss
+
+Report
+------
+A report has been generated in the file /home/kali/.wapiti/generated_report
+Open /home/kali/.wapiti/generated_report/paymefin.tech_11162024_1442.html with a browser to see this report.
+                                                                                                              

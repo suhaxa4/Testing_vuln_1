@@ -19,7 +19,6 @@ The assessment was conducted in the following steps:
 
 1. Domain Information Gathering:
    - Used Whois to collect registrar details, DNS servers, and IP addresses.
-   - Identified hosting provider and SSL/TLS configurations.
 
 2. Network Analysis:
    - Nslookup and Traceroute were utilized to evaluate DNS records and network routing.

@@ -33,13 +33,10 @@ Below are the potential vulnerabilities identified during the assessment:
 1. Outdated Software:
    - Nikto detected possible outdated versions of the web server software. This may leave the application susceptible to known exploits.
 
-2. DNS Misconfigurations:
-   - Nslookup results indicate no SPF or DKIM records. This increases the risk of email spoofing.
-
-3. SSL/TLS Issues:
+2. SSL/TLS Issues:
    - Skipfish identified weak SSL/TLS ciphers in use, potentially allowing attackers to intercept traffic.
 
-4. Web Application Vulnerabilities:
+3. Web Application Vulnerabilities:
    Wapiti scans highlighted:
      - XSS Risks: Input fields lacking proper sanitization.
      - Potential SQL Injection Points: Certain endpoints appear vulnerable due to improper input validation.
@@ -48,9 +45,6 @@ Below are the potential vulnerabilities identified during the assessment:
 Recommendations- 
 1. Update Software:
    - Ensure the web server and associated software are updated to their latest versions.
-
-2. Secure DNS Configurations:
-   - Add SPF and DKIM records to the DNS to mitigate email spoofing risks.
 
 3. Enhance SSL/TLS Security:
    - Disable weak ciphers and implement a strong HTTPS configuration.

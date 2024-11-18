@@ -30,9 +30,8 @@ The assessment was conducted in the following steps:
 Findings- 
 Below are the potential vulnerabilities identified during the assessment:
 
-1. Outdated Software:
-   - Nikto detected possible outdated versions of the web server software. This may leave the application susceptible to known exploits.
-
+1. Different MIME:
+   - Nikto detected the absence of the X-Content-Type-Options header could allow the browser to interpret files as a different MIME type. 
 2. SSL/TLS Issues:
    - Skipfish identified weak SSL/TLS ciphers in use, potentially allowing attackers to intercept traffic.
 
@@ -43,8 +42,8 @@ Below are the potential vulnerabilities identified during the assessment:
 
 
 Recommendations- 
-1. Update Software:
-   - Ensure the web server and associated software are updated to their latest versions.
+1. Adding nosniff:
+   - Adding this X-Content-Type-Options header with the value nosniff is recommended.
 
 3. Enhance SSL/TLS Security:
    - Disable weak ciphers and implement a strong HTTPS configuration.
